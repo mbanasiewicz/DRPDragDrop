@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		340147A719517BD400EC76BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340147A619517BD400EC76BB /* Foundation.framework */; };
+		340147A919517BD400EC76BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340147A819517BD400EC76BB /* CoreGraphics.framework */; };
+		340147AB19517BD400EC76BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340147AA19517BD400EC76BB /* UIKit.framework */; };
+		340147B119517BD400EC76BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 340147AF19517BD400EC76BB /* InfoPlist.strings */; };
+		340147B319517BD400EC76BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 340147B219517BD400EC76BB /* main.m */; };
+		340147B719517BD400EC76BB /* DRPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 340147B619517BD400EC76BB /* DRPAppDelegate.m */; };
+		340147BA19517BD400EC76BB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340147B819517BD400EC76BB /* Main_iPhone.storyboard */; };
+		340147BD19517BD400EC76BB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340147BB19517BD400EC76BB /* Main_iPad.storyboard */; };
+		340147C019517BD400EC76BB /* DRPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340147BF19517BD400EC76BB /* DRPViewController.m */; };
+		340147C219517BD400EC76BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340147C119517BD400EC76BB /* Images.xcassets */; };
+		340147C919517BD400EC76BB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340147C819517BD400EC76BB /* XCTest.framework */; };
+		340147CA19517BD400EC76BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340147A619517BD400EC76BB /* Foundation.framework */; };
+		340147CB19517BD400EC76BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340147AA19517BD400EC76BB /* UIKit.framework */; };
+		340147D319517BD400EC76BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 340147D119517BD400EC76BB /* InfoPlist.strings */; };
+		340147D519517BD400EC76BB /* DragDropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 340147D419517BD400EC76BB /* DragDropTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		340147CC19517BD400EC76BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3401479B19517BD400EC76BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340147A219517BD400EC76BB;
+			remoteInfo = DragDrop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		340147A319517BD400EC76BB /* DragDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		340147A619517BD400EC76BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		340147A819517BD400EC76BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		340147AA19517BD400EC76BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		340147AE19517BD400EC76BB /* DragDrop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DragDrop-Info.plist"; sourceTree = "<group>"; };
+		340147B019517BD400EC76BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		340147B219517BD400EC76BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		340147B419517BD400EC76BB /* DragDrop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DragDrop-Prefix.pch"; sourceTree = "<group>"; };
+		340147B519517BD400EC76BB /* DRPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRPAppDelegate.h; sourceTree = "<group>"; };
+		340147B619517BD400EC76BB /* DRPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRPAppDelegate.m; sourceTree = "<group>"; };
+		340147B919517BD400EC76BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		340147BC19517BD400EC76BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		340147BE19517BD400EC76BB /* DRPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRPViewController.h; sourceTree = "<group>"; };
+		340147BF19517BD400EC76BB /* DRPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRPViewController.m; sourceTree = "<group>"; };
+		340147C119517BD400EC76BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		340147C719517BD400EC76BB /* DragDropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		340147C819517BD400EC76BB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		340147D019517BD400EC76BB /* DragDropTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DragDropTests-Info.plist"; sourceTree = "<group>"; };
+		340147D219517BD400EC76BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		340147D419517BD400EC76BB /* DragDropTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragDropTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		340147A019517BD400EC76BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340147A919517BD400EC76BB /* CoreGraphics.framework in Frameworks */,
+				340147AB19517BD400EC76BB /* UIKit.framework in Frameworks */,
+				340147A719517BD400EC76BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340147C419517BD400EC76BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340147C919517BD400EC76BB /* XCTest.framework in Frameworks */,
+				340147CB19517BD400EC76BB /* UIKit.framework in Frameworks */,
+				340147CA19517BD400EC76BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3401479A19517BD400EC76BB = {
+			isa = PBXGroup;
+			children = (
+				340147AC19517BD400EC76BB /* DragDrop */,
+				340147CE19517BD400EC76BB /* DragDropTests */,
+				340147A519517BD400EC76BB /* Frameworks */,
+				340147A419517BD400EC76BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		340147A419517BD400EC76BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				340147A319517BD400EC76BB /* DragDrop.app */,
+				340147C719517BD400EC76BB /* DragDropTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		340147A519517BD400EC76BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				340147A619517BD400EC76BB /* Foundation.framework */,
+				340147A819517BD400EC76BB /* CoreGraphics.framework */,
+				340147AA19517BD400EC76BB /* UIKit.framework */,
+				340147C819517BD400EC76BB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		340147AC19517BD400EC76BB /* DragDrop */ = {
+			isa = PBXGroup;
+			children = (
+				340147B519517BD400EC76BB /* DRPAppDelegate.h */,
+				340147B619517BD400EC76BB /* DRPAppDelegate.m */,
+				340147B819517BD400EC76BB /* Main_iPhone.storyboard */,
+				340147BB19517BD400EC76BB /* Main_iPad.storyboard */,
+				340147BE19517BD400EC76BB /* DRPViewController.h */,
+				340147BF19517BD400EC76BB /* DRPViewController.m */,
+				340147C119517BD400EC76BB /* Images.xcassets */,
+				340147AD19517BD400EC76BB /* Supporting Files */,
+			);
+			path = DragDrop;
+			sourceTree = "<group>";
+		};
+		340147AD19517BD400EC76BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				340147AE19517BD400EC76BB /* DragDrop-Info.plist */,
+				340147AF19517BD400EC76BB /* InfoPlist.strings */,
+				340147B219517BD400EC76BB /* main.m */,
+				340147B419517BD400EC76BB /* DragDrop-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		340147CE19517BD400EC76BB /* DragDropTests */ = {
+			isa = PBXGroup;
+			children = (
+				340147D419517BD400EC76BB /* DragDropTests.m */,
+				340147CF19517BD400EC76BB /* Supporting Files */,
+			);
+			path = DragDropTests;
+			sourceTree = "<group>";
+		};
+		340147CF19517BD400EC76BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				340147D019517BD400EC76BB /* DragDropTests-Info.plist */,
+				340147D119517BD400EC76BB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		340147A219517BD400EC76BB /* DragDrop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 340147D819517BD400EC76BB /* Build configuration list for PBXNativeTarget "DragDrop" */;
+			buildPhases = (
+				3401479F19517BD400EC76BB /* Sources */,
+				340147A019517BD400EC76BB /* Frameworks */,
+				340147A119517BD400EC76BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DragDrop;
+			productName = DragDrop;
+			productReference = 340147A319517BD400EC76BB /* DragDrop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		340147C619517BD400EC76BB /* DragDropTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 340147DB19517BD400EC76BB /* Build configuration list for PBXNativeTarget "DragDropTests" */;
+			buildPhases = (
+				340147C319517BD400EC76BB /* Sources */,
+				340147C419517BD400EC76BB /* Frameworks */,
+				340147C519517BD400EC76BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				340147CD19517BD400EC76BB /* PBXTargetDependency */,
+			);
+			name = DragDropTests;
+			productName = DragDropTests;
+			productReference = 340147C719517BD400EC76BB /* DragDropTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3401479B19517BD400EC76BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DRP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Maciej;
+				TargetAttributes = {
+					340147C619517BD400EC76BB = {
+						TestTargetID = 340147A219517BD400EC76BB;
+					};
+				};
+			};
+			buildConfigurationList = 3401479E19517BD400EC76BB /* Build configuration list for PBXProject "DragDrop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3401479A19517BD400EC76BB;
+			productRefGroup = 340147A419517BD400EC76BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				340147A219517BD400EC76BB /* DragDrop */,
+				340147C619517BD400EC76BB /* DragDropTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		340147A119517BD400EC76BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340147BD19517BD400EC76BB /* Main_iPad.storyboard in Resources */,
+				340147C219517BD400EC76BB /* Images.xcassets in Resources */,
+				340147BA19517BD400EC76BB /* Main_iPhone.storyboard in Resources */,
+				340147B119517BD400EC76BB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340147C519517BD400EC76BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340147D319517BD400EC76BB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3401479F19517BD400EC76BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340147C019517BD400EC76BB /* DRPViewController.m in Sources */,
+				340147B319517BD400EC76BB /* main.m in Sources */,
+				340147B719517BD400EC76BB /* DRPAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340147C319517BD400EC76BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340147D519517BD400EC76BB /* DragDropTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		340147CD19517BD400EC76BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340147A219517BD400EC76BB /* DragDrop */;
+			targetProxy = 340147CC19517BD400EC76BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		340147AF19517BD400EC76BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				340147B019517BD400EC76BB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		340147B819517BD400EC76BB /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				340147B919517BD400EC76BB /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		340147BB19517BD400EC76BB /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				340147BC19517BD400EC76BB /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		340147D119517BD400EC76BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				340147D219517BD400EC76BB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		340147D619517BD400EC76BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		340147D719517BD400EC76BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		340147D919517BD400EC76BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DragDrop/DragDrop-Prefix.pch";
+				INFOPLIST_FILE = "DragDrop/DragDrop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		340147DA19517BD400EC76BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DragDrop/DragDrop-Prefix.pch";
+				INFOPLIST_FILE = "DragDrop/DragDrop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		340147DC19517BD400EC76BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DragDrop.app/DragDrop";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DragDrop/DragDrop-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DragDropTests/DragDropTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		340147DD19517BD400EC76BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DragDrop.app/DragDrop";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DragDrop/DragDrop-Prefix.pch";
+				INFOPLIST_FILE = "DragDropTests/DragDropTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3401479E19517BD400EC76BB /* Build configuration list for PBXProject "DragDrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340147D619517BD400EC76BB /* Debug */,
+				340147D719517BD400EC76BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		340147D819517BD400EC76BB /* Build configuration list for PBXNativeTarget "DragDrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340147D919517BD400EC76BB /* Debug */,
+				340147DA19517BD400EC76BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		340147DB19517BD400EC76BB /* Build configuration list for PBXNativeTarget "DragDropTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340147DC19517BD400EC76BB /* Debug */,
+				340147DD19517BD400EC76BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3401479B19517BD400EC76BB /* Project object */;
+}
