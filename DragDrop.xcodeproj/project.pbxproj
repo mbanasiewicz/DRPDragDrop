@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0631D40CBBB1496BBDE853F7 /* libPods-DragDrop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F77681ECF40D4A5ABDB3EBF7 /* libPods-DragDrop.a */; };
 		340147A719517BD400EC76BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340147A619517BD400EC76BB /* Foundation.framework */; };
 		340147A919517BD400EC76BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340147A819517BD400EC76BB /* CoreGraphics.framework */; };
 		340147AB19517BD400EC76BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340147AA19517BD400EC76BB /* UIKit.framework */; };
@@ -22,6 +23,14 @@
 		340147CB19517BD400EC76BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340147AA19517BD400EC76BB /* UIKit.framework */; };
 		340147D319517BD400EC76BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 340147D119517BD400EC76BB /* InfoPlist.strings */; };
 		340147D519517BD400EC76BB /* DragDropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 340147D419517BD400EC76BB /* DragDropTests.m */; };
+		34C6BEF6197E58D8007DFDCB /* DRPDragActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6BEEF197E58D8007DFDCB /* DRPDragActionController.m */; };
+		34C6BEF7197E58D8007DFDCB /* DRPDraggableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6BEF1197E58D8007DFDCB /* DRPDraggableImageView.m */; };
+		34C6BEF8197E58D8007DFDCB /* DRPDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6BEF3197E58D8007DFDCB /* DRPDraggableView.m */; };
+		34C6BEF9197E58D8007DFDCB /* DRPOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6BEF5197E58D8007DFDCB /* DRPOverlayView.m */; };
+		9B24D1F6A68E1892613C6C93 /* 535972-418x500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B24DBDE34AF6001805EF3CE /* 535972-418x500.jpg */; };
+		9B24D7E56F0715960D0674DC /* DragDropGem.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B24DA19B0515ED9D4CC309F /* DragDropGem.png */; };
+		9B24D8D7879AA8DE7E7C891E /* DragDropGem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B24DA67EC5B1FABB6398BC7 /* DragDropGem@2x.png */; };
+		9B24DB1B4A64F425E371BCB6 /* DRPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B24DB5E0B66AFEE422A8C3C /* DRPTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,21 @@
 		340147D019517BD400EC76BB /* DragDropTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DragDropTests-Info.plist"; sourceTree = "<group>"; };
 		340147D219517BD400EC76BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		340147D419517BD400EC76BB /* DragDropTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragDropTests.m; sourceTree = "<group>"; };
+		34C6BEEE197E58D8007DFDCB /* DRPDragActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPDragActionController.h; sourceTree = "<group>"; };
+		34C6BEEF197E58D8007DFDCB /* DRPDragActionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPDragActionController.m; sourceTree = "<group>"; };
+		34C6BEF0197E58D8007DFDCB /* DRPDraggableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPDraggableImageView.h; sourceTree = "<group>"; };
+		34C6BEF1197E58D8007DFDCB /* DRPDraggableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPDraggableImageView.m; sourceTree = "<group>"; };
+		34C6BEF2197E58D8007DFDCB /* DRPDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPDraggableView.h; sourceTree = "<group>"; };
+		34C6BEF3197E58D8007DFDCB /* DRPDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPDraggableView.m; sourceTree = "<group>"; };
+		34C6BEF4197E58D8007DFDCB /* DRPOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPOverlayView.h; sourceTree = "<group>"; };
+		34C6BEF5197E58D8007DFDCB /* DRPOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPOverlayView.m; sourceTree = "<group>"; };
+		36699445BC2E4C519DC5C18D /* Pods-DragDrop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDrop.xcconfig"; path = "Pods/Pods-DragDrop.xcconfig"; sourceTree = "<group>"; };
+		9B24D47FE70A0E454672AC65 /* DRPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPTableViewCell.h; sourceTree = "<group>"; };
+		9B24DA19B0515ED9D4CC309F /* DragDropGem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DragDropGem.png; sourceTree = "<group>"; };
+		9B24DA67EC5B1FABB6398BC7 /* DragDropGem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DragDropGem@2x.png"; sourceTree = "<group>"; };
+		9B24DB5E0B66AFEE422A8C3C /* DRPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPTableViewCell.m; sourceTree = "<group>"; };
+		9B24DBDE34AF6001805EF3CE /* 535972-418x500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "535972-418x500.jpg"; sourceTree = "<group>"; };
+		F77681ECF40D4A5ABDB3EBF7 /* libPods-DragDrop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DragDrop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +89,7 @@
 				340147A919517BD400EC76BB /* CoreGraphics.framework in Frameworks */,
 				340147AB19517BD400EC76BB /* UIKit.framework in Frameworks */,
 				340147A719517BD400EC76BB /* Foundation.framework in Frameworks */,
+				0631D40CBBB1496BBDE853F7 /* libPods-DragDrop.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,10 +109,12 @@
 		3401479A19517BD400EC76BB = {
 			isa = PBXGroup;
 			children = (
+				34C6BEED197E5888007DFDCB /* Source */,
 				340147AC19517BD400EC76BB /* DragDrop */,
 				340147CE19517BD400EC76BB /* DragDropTests */,
 				340147A519517BD400EC76BB /* Frameworks */,
 				340147A419517BD400EC76BB /* Products */,
+				36699445BC2E4C519DC5C18D /* Pods-DragDrop.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +134,7 @@
 				340147A819517BD400EC76BB /* CoreGraphics.framework */,
 				340147AA19517BD400EC76BB /* UIKit.framework */,
 				340147C819517BD400EC76BB /* XCTest.framework */,
+				F77681ECF40D4A5ABDB3EBF7 /* libPods-DragDrop.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +150,11 @@
 				340147BF19517BD400EC76BB /* DRPViewController.m */,
 				340147C119517BD400EC76BB /* Images.xcassets */,
 				340147AD19517BD400EC76BB /* Supporting Files */,
+				9B24DB5E0B66AFEE422A8C3C /* DRPTableViewCell.m */,
+				9B24D47FE70A0E454672AC65 /* DRPTableViewCell.h */,
+				9B24DBDE34AF6001805EF3CE /* 535972-418x500.jpg */,
+				9B24DA67EC5B1FABB6398BC7 /* DragDropGem@2x.png */,
+				9B24DA19B0515ED9D4CC309F /* DragDropGem.png */,
 			);
 			path = DragDrop;
 			sourceTree = "<group>";
@@ -155,6 +188,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		34C6BEED197E5888007DFDCB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				34C6BEEE197E58D8007DFDCB /* DRPDragActionController.h */,
+				34C6BEEF197E58D8007DFDCB /* DRPDragActionController.m */,
+				34C6BEF0197E58D8007DFDCB /* DRPDraggableImageView.h */,
+				34C6BEF1197E58D8007DFDCB /* DRPDraggableImageView.m */,
+				34C6BEF2197E58D8007DFDCB /* DRPDraggableView.h */,
+				34C6BEF3197E58D8007DFDCB /* DRPDraggableView.m */,
+				34C6BEF4197E58D8007DFDCB /* DRPOverlayView.h */,
+				34C6BEF5197E58D8007DFDCB /* DRPOverlayView.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 340147D819517BD400EC76BB /* Build configuration list for PBXNativeTarget "DragDrop" */;
 			buildPhases = (
+				1EDBF43B831C4900868A33D7 /* Check Pods Manifest.lock */,
 				3401479F19517BD400EC76BB /* Sources */,
 				340147A019517BD400EC76BB /* Frameworks */,
 				340147A119517BD400EC76BB /* Resources */,
+				80F47802BAE4438CA3A79D22 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +286,9 @@
 				340147C219517BD400EC76BB /* Images.xcassets in Resources */,
 				340147BA19517BD400EC76BB /* Main_iPhone.storyboard in Resources */,
 				340147B119517BD400EC76BB /* InfoPlist.strings in Resources */,
+				9B24D1F6A68E1892613C6C93 /* 535972-418x500.jpg in Resources */,
+				9B24D8D7879AA8DE7E7C891E /* DragDropGem@2x.png in Resources */,
+				9B24D7E56F0715960D0674DC /* DragDropGem.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,14 +302,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EDBF43B831C4900868A33D7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		80F47802BAE4438CA3A79D22 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-DragDrop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3401479F19517BD400EC76BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				340147C019517BD400EC76BB /* DRPViewController.m in Sources */,
+				34C6BEF7197E58D8007DFDCB /* DRPDraggableImageView.m in Sources */,
+				34C6BEF8197E58D8007DFDCB /* DRPDraggableView.m in Sources */,
+				34C6BEF6197E58D8007DFDCB /* DRPDragActionController.m in Sources */,
 				340147B319517BD400EC76BB /* main.m in Sources */,
 				340147B719517BD400EC76BB /* DRPAppDelegate.m in Sources */,
+				34C6BEF9197E58D8007DFDCB /* DRPOverlayView.m in Sources */,
+				9B24DB1B4A64F425E371BCB6 /* DRPTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +479,7 @@
 		};
 		340147D919517BD400EC76BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36699445BC2E4C519DC5C18D /* Pods-DragDrop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -395,12 +487,14 @@
 				GCC_PREFIX_HEADER = "DragDrop/DragDrop-Prefix.pch";
 				INFOPLIST_FILE = "DragDrop/DragDrop-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		340147DA19517BD400EC76BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36699445BC2E4C519DC5C18D /* Pods-DragDrop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -408,6 +502,7 @@
 				GCC_PREFIX_HEADER = "DragDrop/DragDrop-Prefix.pch";
 				INFOPLIST_FILE = "DragDrop/DragDrop-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -471,6 +566,7 @@
 				340147DA19517BD400EC76BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		340147DB19517BD400EC76BB /* Build configuration list for PBXNativeTarget "DragDropTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +575,7 @@
 				340147DD19517BD400EC76BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
