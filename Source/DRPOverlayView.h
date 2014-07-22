@@ -10,5 +10,6 @@
 
 @interface DRPOverlayView : UIView
 @property (strong, nonatomic) UIImageView *imageView;
-@property (strong, nonatomic) UILabel *overlayCopyLabel;
+- (instancetype)initWithImage:(UIImage *)image;
+- (CGPoint)targetPoint;
 @end

@@ -6,12 +6,13 @@
 #import <Foundation/Foundation.h>
 
 @class DRPDraggableImageView;
-
+@class DRPOverlayView;
 
 typedef void (^DRPDragActionControllerCompletion)(BOOL didSelect);
 @interface DRPDragActionController : NSObject
 @property (weak, nonatomic) UIView *referencingView;
 @property (nonatomic) CGPoint viewOffset;
 @property (strong, nonatomic) DRPDragActionControllerCompletion completion;
+@property (strong, nonatomic) DRPOverlayView *referencingViewOverlay;
 - (void)didPressImageView:(UILongPressGestureRecognizer *)longPressGestureRecognizer;
 @end

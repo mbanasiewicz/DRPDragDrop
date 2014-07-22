@@ -16,26 +16,16 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
 
 @interface DRPDragActionController ()
 @property (strong, nonatomic) DRPDraggableView *currentDraggableView;
-@property (strong, nonatomic) DRPOverlayView *referencingViewOverlay;
 @end
 
 @implementation DRPDragActionController
-- (id)init {
-    if (self = [super init]) {
-
-    }
-    return self;
-}
-
-- (void)createReferencingViewOverlay {
-    CGRect referencingViewBounds = self.referencingView.bounds;
-    self.referencingViewOverlay = [[DRPOverlayView alloc] initWithFrame:referencingViewBounds];
-    self.referencingViewOverlay.imageView.image = [UIImage imageNamed:@"DragDropGem"];
-    self.referencingViewOverlay.overlayCopyLabel.text = @"Drag and drop to add to your gems";
-    self.referencingViewOverlay.backgroundColor = [UIColor colorWithWhite:0.5f alpha:0.6f];
-    self.referencingViewOverlay.alpha = 0.0f;
+- (void)insertReferencingViewOverlay {
+    NSAssert(self.referencingViewOverlay, @"You must provide referencing view overlay subclass");
     [self.referencingView addSubview:self.referencingViewOverlay];
-
+    
+    [self.referencingView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_referencingViewOverlay]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_referencingViewOverlay)]];
+    [self.referencingView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_referencingViewOverlay]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_referencingViewOverlay)]];
+    
     [UIView animateWithDuration:0.5f animations:^{
         self.referencingViewOverlay.alpha = 1.0f;
     }];
@@ -46,7 +36,6 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
         self.referencingViewOverlay.alpha = 0.0f;
     } completion:^(BOOL finished) {
         [self.referencingViewOverlay removeFromSuperview];
-        self.referencingViewOverlay = nil;
     }];
 }
 
@@ -55,9 +44,7 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
     static CGPoint initialPoint;
     DRPDraggableImageView *draggableImageView = (DRPDraggableImageView *) longPressGestureRecognizer.view;
     CGPoint viewOffset = self.viewOffset;
-    if (!self.referencingViewOverlay) {
-        [self createReferencingViewOverlay];
-    }
+    [self insertReferencingViewOverlay];
     switch (longPressGestureRecognizer.state) {
         case UIGestureRecognizerStatePossible:break;
         case UIGestureRecognizerStateBegan: {
@@ -67,7 +54,7 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
             self.currentDraggableView.center = initialPoint;
             self.currentDraggableView.imageView.image = draggableImageView.image;
             self.currentDraggableView.alpha = 0.0f;
-            [self.referencingView addSubview:self.currentDraggableView];
+            [self.referencingViewOverlay addSubview:self.currentDraggableView];
 
             [UIView animateWithDuration:0.3f animations:^{
                 self.currentDraggableView.alpha = 1.0f;
@@ -78,7 +65,6 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
             CGPoint newPoint = [longPressGestureRecognizer locationInView:self.referencingView];
             CGPoint newPosition = CGPointAdd(newPoint, viewOffset);
             _currentDraggableView.center = newPosition;
-
             break;
         }
         case UIGestureRecognizerStateEnded:
@@ -88,8 +74,7 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
             CGPoint draggableViewDestination = initialPoint;
             BOOL isNearBottom = _currentDraggableView.layer.frame.origin.y > self.referencingView.bounds.size.height / 2.0f;
             if (isNearBottom) {
-                draggableViewDestination.x = CGRectGetMidX(self.referencingView.bounds);
-                draggableViewDestination.y = CGRectGetMaxY(self.referencingView.bounds);
+                draggableViewDestination = self.referencingViewOverlay.targetPoint;
             }
 
 

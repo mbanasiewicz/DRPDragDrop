@@ -10,6 +10,7 @@
 #import "DRPTableViewCell.h"
 #import "DRPDraggableImageView.h"
 #import "DRPDragActionController.h"
+#import "DRPOverlayView.h"
 
 @interface DRPViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
@@ -41,8 +42,12 @@
     self.tableView.delegate = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
+    DRPOverlayView *referencingViewOverlay = [[DRPOverlayView alloc] initWithImage:[UIImage imageNamed:@"DragDropGem"]];
+    referencingViewOverlay.backgroundColor = [UIColor colorWithWhite:0.5f alpha:0.6f];
+    
     self.dragActionController = [[DRPDragActionController alloc] init];
     self.dragActionController.referencingView = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+    self.dragActionController.referencingViewOverlay = referencingViewOverlay;
     self.dragActionController.completion = ^(BOOL didSelect) {
         NSLog(@"didSelect = %d", didSelect);
     };

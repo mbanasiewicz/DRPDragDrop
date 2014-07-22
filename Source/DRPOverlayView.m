@@ -9,27 +9,24 @@
 #import "DRPOverlayView.h"
 
 @implementation DRPOverlayView
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        self.imageView = [[UIImageView alloc] init];
+- (instancetype)initWithImage:(UIImage *)image {
+    if (self = [super init]) {
+        self.imageView = [[UIImageView alloc] initWithImage:image];
         self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:self.imageView];
-
-        self.overlayCopyLabel = [[UILabel alloc] init];
-        self.overlayCopyLabel.preferredMaxLayoutWidth = 200.0f;
-        self.overlayCopyLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:self.overlayCopyLabel];
-
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        self.alpha = 0;
     }
     return self;
 }
 
 - (void)updateConstraints {
     [super updateConstraints];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_overlayCopyLabel]-(10)-[_imageView]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_overlayCopyLabel, _imageView)]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_overlayCopyLabel attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.0f]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_imageView(60)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_imageView)]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_imageView attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.0f]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_imageView(50)]-(10)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_imageView)]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_imageView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_imageView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0f constant:-50.0]];
+}
+
+- (CGPoint)targetPoint {
+    return self.imageView.center;
 }
 @end
