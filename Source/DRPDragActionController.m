@@ -62,8 +62,6 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
         case UIGestureRecognizerStatePossible:break;
         case UIGestureRecognizerStateBegan: {
             initialPoint = [longPressGestureRecognizer locationInView:self.referencingView];
-            CGPoint newPosition = CGPointAdd(initialPoint, viewOffset);
-
             self.currentDraggableView = [[DRPDraggableView alloc] initWithFrame:CGRectMake(0.0, 0.0, 65.0f, 65.0f)];
             self.currentDraggableView.backgroundColor = [UIColor clearColor];
             self.currentDraggableView.center = initialPoint;
