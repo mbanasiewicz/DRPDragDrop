@@ -7,11 +7,11 @@
 #import "DRPDragActionController.h"
 
 
-@interface DRPDraggableImageView ()
+@interface DRPDraggableImageView () <UIGestureRecognizerDelegate>
 @property (strong, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer;
 @end
 @implementation DRPDraggableImageView {
-
+    
 }
 
 - (id)initWithImage:(UIImage *)image {
@@ -42,9 +42,9 @@
 
 - (void)setup {
     self.userInteractionEnabled = YES;
-
     // Long press to detect it
     self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onLongPressGestureRecognized:)];
+    self.longPressGestureRecognizer.delegate = self;
     [self addGestureRecognizer:self.longPressGestureRecognizer];
 }
 
@@ -53,4 +53,9 @@
         [self.dragActionController didPressImageView:longPressGestureRecognizer];
     }
 }
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    return YES;
+}
+
 @end
