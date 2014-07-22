@@ -1,13 +1,15 @@
 Pod::Spec.new do |s|
-  s.name         = 'LARSAdController'
-  s.version      = '3.0.0'
-  s.summary      = 'Lightweight ad mediation for iOS'
+  s.name         = 'DRPDragDrop'
+  s.version      = '0.0.2'
+  s.summary      = 'Simple drag and drop lib'
+  s.platform     =  :ios, "7.1"
+  s.requires_arc = true
   s.author = {
-    'Lars Anderson' => 'youremail@here.com'
+    'Maciej Banasiewicz' => 'mbanasiewicz@gmail.com'
   }
   s.source = {
     :git => 'https://github.com/mbanasiewicz/DRPDragDrop.git',
-    :tag => '3.0.0'
+    :tag => '0.0.1'
   }
   s.source_files = 'Source/*.{h,m}'
   s.dependency     'pop'
