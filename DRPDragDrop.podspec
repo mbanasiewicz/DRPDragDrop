@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'DRPDragDrop'
-  s.version      = '0.0.5'
+  s.version      = '0.0.6'
   s.summary      = 'Simple drag and drop lib'
   s.platform     =  :ios, "7.0"
   s.requires_arc = true

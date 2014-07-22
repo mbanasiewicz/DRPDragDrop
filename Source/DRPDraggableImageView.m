@@ -35,6 +35,11 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self setup];
+}
+
 - (void)setup {
     self.userInteractionEnabled = YES;
 
