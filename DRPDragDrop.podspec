@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = 'DRPDragDrop'
   s.version      = '0.0.4'
   s.summary      = 'Simple drag and drop lib'
-  s.platform     =  :ios, "7.1"
+  s.platform     =  :ios, "7.0"
   s.requires_arc = true
   s.author = {
     'Maciej Banasiewicz' => 'mbanasiewicz@gmail.com'
