@@ -10,10 +10,7 @@
 @interface DRPDraggableImageView () <UIGestureRecognizerDelegate>
 @property (strong, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer;
 @end
-@implementation DRPDraggableImageView {
-    
-}
-
+@implementation DRPDraggableImageView
 - (id)initWithImage:(UIImage *)image {
     if (self = [super init]) {
         [self setup];
@@ -44,11 +41,12 @@
     self.userInteractionEnabled = YES;
     // Long press to detect it
     self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onLongPressGestureRecognized:)];
+    self.longPressGestureRecognizer.cancelsTouchesInView = YES;
     self.longPressGestureRecognizer.delegate = self;
     [self addGestureRecognizer:self.longPressGestureRecognizer];
 }
 
-- (void)onLongPressGestureRecognized:(UILongPressGestureRecognizer *)longPressGestureRecognizer  {
+- (void)onLongPressGestureRecognized:(UILongPressGestureRecognizer *)longPressGestureRecognizer {
     if (self.dragActionController) {
         [self.dragActionController didPressImageView:longPressGestureRecognizer];
     }
@@ -57,5 +55,13 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     return YES;
 }
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return ![otherGestureRecognizer isKindOfClass:NSClassFromString(@"UIScrollViewPanGestureRecognizer")];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return NO;
+}
+
 
 @end
