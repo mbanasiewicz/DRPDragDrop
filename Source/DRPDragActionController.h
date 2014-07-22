@@ -8,7 +8,7 @@
 @class DRPDraggableImageView;
 @class DRPOverlayView;
 
-typedef void (^DRPDragActionControllerCompletion)(BOOL didSelect);
+typedef void (^DRPDragActionControllerCompletion)(BOOL didSelect, NSDictionary *customData);
 @interface DRPDragActionController : NSObject
 @property (weak, nonatomic) UIView *referencingView;
 @property (nonatomic) CGPoint viewOffset;

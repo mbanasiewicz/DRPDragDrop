@@ -48,8 +48,9 @@
     self.dragActionController = [[DRPDragActionController alloc] init];
     self.dragActionController.referencingView = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
     self.dragActionController.referencingViewOverlay = referencingViewOverlay;
-    self.dragActionController.completion = ^(BOOL didSelect) {
+    self.dragActionController.completion = ^(BOOL didSelect, NSDictionary *customData) {
         NSLog(@"didSelect = %d", didSelect);
+        NSLog(@"%@", customData);
     };
     self.dragActionController.viewOffset = CGPointMake(-5, 0);
 }
@@ -68,6 +69,7 @@
     UIImage *image = [UIImage imageNamed:@"535972-418x500.jpg"];
     NSLog(@"image = %@", image);
     cell.cellImageView.image = image;
+    cell.cellImageView.customData = @{@"A": @"B"};
     cell.cellImageView.dragActionController = self.dragActionController;
     return cell;
 }

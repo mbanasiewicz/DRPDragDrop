@@ -10,4 +10,5 @@
 
 @interface DRPDraggableImageView : UIImageView
 @property (weak, nonatomic) DRPDragActionController *dragActionController;
+@property (strong, nonatomic) NSDictionary *customData;
 @end

@@ -8,4 +8,5 @@
 
 @interface DRPDraggableView : UIView
 @property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) NSDictionary *customData;
 @end

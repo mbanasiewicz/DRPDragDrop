@@ -14,6 +14,14 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
     return CGPointMake(p1.x + p2.x, p1.y + p2.y);
 }
 
+CGFloat CGPointsDistance(CGPoint p1, CGPoint p2) {
+#ifdef CGFLOAT_IS_DOUBLE 
+    return sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
+#else
+    return sqrtf((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
+#endif
+};
+
 @interface DRPDragActionController ()
 @property (strong, nonatomic) DRPDraggableView *currentDraggableView;
 @end
@@ -42,9 +50,10 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
 - (void)didPressImageView:(UILongPressGestureRecognizer *)longPressGestureRecognizer {
 
     static CGPoint initialPoint;
-    DRPDraggableImageView *draggableImageView = (DRPDraggableImageView *) longPressGestureRecognizer.view;
     CGPoint viewOffset = self.viewOffset;
     [self insertReferencingViewOverlay];
+    DRPDraggableImageView *draggableImageView = (DRPDraggableImageView *) longPressGestureRecognizer.view;
+
     switch (longPressGestureRecognizer.state) {
         case UIGestureRecognizerStatePossible:break;
         case UIGestureRecognizerStateBegan: {
@@ -54,6 +63,7 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
             self.currentDraggableView.center = initialPoint;
             self.currentDraggableView.imageView.image = draggableImageView.image;
             self.currentDraggableView.alpha = 0.0f;
+            self.currentDraggableView.customData = draggableImageView.customData;
             [self.referencingViewOverlay addSubview:self.currentDraggableView];
 
             [UIView animateWithDuration:0.3f animations:^{
@@ -71,8 +81,9 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateFailed:{
 
-            CGPoint draggableViewDestination = initialPoint;
-            BOOL isNearBottom = _currentDraggableView.layer.frame.origin.y > self.referencingView.bounds.size.height / 2.0f;
+            CGPoint draggableViewDestination = [self.referencingViewOverlay convertPoint:draggableImageView.center fromView:draggableImageView];
+            CGPoint draggableViewLocation = _currentDraggableView.layer.frame.origin;
+            BOOL isNearBottom = CGPointsDistance(initialPoint, draggableViewLocation) > CGPointsDistance(self.referencingViewOverlay.targetPoint, draggableViewLocation);
             if (isNearBottom) {
                 draggableViewDestination = self.referencingViewOverlay.targetPoint;
             }
@@ -90,11 +101,11 @@ CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
                          _currentDraggableView.alpha = 0.0f;
                     } completion:^(BOOL finished) {
                         [_currentDraggableView removeFromSuperview];
-                        _currentDraggableView = nil;
                         [self removeReferencingViewOverlay];
                         if (self.completion) {
-                            self.completion(isNearBottom);
+                            self.completion(isNearBottom, _currentDraggableView.customData);
                         }
+                        _currentDraggableView = nil;
                     }];
                 }
             };
